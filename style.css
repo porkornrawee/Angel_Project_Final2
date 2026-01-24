@@ -1,0 +1,90 @@
+/* General Setup */
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+h1 {
+    letter-spacing: -2px;
+}
+
+.header-line {
+    height: 3px;
+    width: 50px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+/* Card Styling */
+.custom-card {
+    border-radius: 20px !important;
+    background: #fff;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.card-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Hover Effect: เด้งขึ้น + เงาเทา */
+.custom-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* --- ANIMATIONS (Fade In Up) --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    opacity: 0; /* เริ่มต้นด้วยการซ่อน */
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.6, 0.3, 1) forwards;
+}
+
+/* ลำดับการเด้ง (Stagger Delay) */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+/* Footer Social Icons */
+.footer-social img {
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.footer-social img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
