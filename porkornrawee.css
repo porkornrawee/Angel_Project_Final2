@@ -1,0 +1,84 @@
+/* การตั้งค่าพื้นฐาน */
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+    line-height: 1.5;
+}
+
+.project-container {
+    max-width: 900px; /* บีบหน้ากระดาษให้ดูเหมือนในรูปตัวอย่าง */
+}
+
+/* หัวข้อใหญ่ */
+.project-headline {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+/* กรอบรูปภาพโครงสร้าง (Placeholder) */
+.project-image-box {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* ปรับสัดส่วนตามรูปภาพที่ส่งมา */
+    background-color: #f0f0f0; /* สีพื้นหลังกรอบรูป */
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effect สำหรับรูปภาพผลงาน */
+.project-item:hover .project-image-box {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    cursor: pointer;
+}
+
+/* ข้อมูลโปรเจกต์ */
+.project-info h2 {
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.project-info p {
+    color: #666;
+}
+
+/* Footer & Social Icons */
+.footer-section {
+    border-top: 1px solid #eee !important;
+}
+
+.social-icons img {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    filter: grayscale(1);
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+/* Animation: ค่อยๆ ลอยขึ้นเมื่อโหลดหน้า */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-up {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.2, 0.6, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }

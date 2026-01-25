@@ -1,0 +1,81 @@
+/* การตั้งค่าพื้นฐาน */
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    line-height: 1.6;
+}
+
+.portfolio-container {
+    max-width: 1000px; /* ปรับความกว้างให้พอดีกับ Grid 2 คอลัมน์ */
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+/* --- Project Grid Styling --- */
+
+.project-card {
+    transition: transform 0.4s ease;
+}
+
+.project-img-box {
+    width: 100%;
+    aspect-ratio: 1.4 / 1; /* ปรับสัดส่วนรูปภาพให้ใกล้เคียงกับในตัวอย่าง */
+    background-color: #f5f5f5; /* สีพื้นหลังกรอบรูป */
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Hover Effect: เด้งขึ้นและเพิ่มเงา */
+.project-card:hover .project-img-box {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+    cursor: pointer;
+}
+
+/* Footer & Contact List */
+.contact-list li {
+    margin-bottom: 8px;
+}
+
+.contact-list a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* --- Animations --- */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-up {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.2, 0.6, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+/* ปรับแต่งสำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+    .display-4 { font-size: 2.5rem; }
+    .project-img-box { aspect-ratio: 1 / 1; } /* มือถือให้เป็นจตุรัสจะประหยัดพื้นที่กว่า */
+}
